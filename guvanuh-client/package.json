@@ -1,0 +1,32 @@
+{
+  "name": "project-template",
+  "version": "0.0.0",
+  "description": "A template for new projects",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "change",
+    "these",
+    "keywords"
+  ],
+  "author": "Jean-Francois Arseneau",
+  "license": "WTFPL",
+  "dependencies": {
+    "grunt": "0.x.x",
+    "grunt-autoprefixer": "0.2.x",
+    "grunt-contrib-clean": "0.5.x",
+    "grunt-contrib-coffee": "0.7.x",
+    "grunt-contrib-copy": "0.4.x",
+    "grunt-contrib-cssmin": "0.6.x",
+    "grunt-contrib-jade": "0.8.x",
+    "grunt-contrib-jshint": "0.6.x",
+    "grunt-contrib-stylus": "0.8.x",
+    "grunt-contrib-uglify": "0.2.x",
+    "grunt-contrib-watch": "0.5.x",
+    "grunt-express": "~1.2.1"
+  },
+  "engine": "node >= 0.10"
+}
+
