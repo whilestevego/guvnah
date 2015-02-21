@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150221045056) do
+ActiveRecord::Schema.define(version: 20150221065423) do
 
   create_table "act_summaries", force: :cascade do |t|
     t.string   "unique_id"
@@ -29,14 +29,14 @@ ActiveRecord::Schema.define(version: 20150221045056) do
     t.string   "unique_id"
     t.string   "language"
     t.string   "link_to_xml"
-    t.string   "link_to_html_to_toc"
+    t.string   "link_to_html_toc"
     t.string   "title"
     t.date     "current_to_date"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.integer  "act_summaries_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "act_summary_id"
   end
 
-  add_index "regulations", ["act_summaries_id"], name: "index_regulations_on_act_summaries_id"
+  add_index "regulations", ["act_summary_id"], name: "index_regulations_on_act_summary_id"
 
 end
