@@ -15,8 +15,11 @@ gem 'slim-rails'
 gem 'bourbon'
 
 # Rails Assets
-gem 'rails-assets-angular'
 gem 'kaminari'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-angular'
+end
 
 group :development do
   gem 'spring'
