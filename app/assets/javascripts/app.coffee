@@ -1,2 +1,0 @@
-guvanuh = angular.module('guvanuh',[
-])
