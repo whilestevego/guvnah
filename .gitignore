@@ -21,4 +21,4 @@
 *.log
 /log/*
 !/log/.keep
-/tmp
+*/tmp
