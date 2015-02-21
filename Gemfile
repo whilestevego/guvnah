@@ -13,6 +13,7 @@ gem 'puma'
 gem 'nokogiri'
 gem 'slim-rails'
 gem 'bourbon'
+gem 'yaml_db'
 
 # Rails Assets
 gem 'kaminari'
