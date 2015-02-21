@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150221044137) do
+ActiveRecord::Schema.define(version: 20150221045056) do
 
   create_table "act_summaries", force: :cascade do |t|
     t.string   "unique_id"
@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(version: 20150221044137) do
     t.date     "current_to_date"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "act_summaries_id"
   end
+
+  add_index "regulations", ["act_summaries_id"], name: "index_regulations_on_act_summaries_id"
 
 end
