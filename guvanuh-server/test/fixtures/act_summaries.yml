@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unique_id: MyString
+  language: 
+  link_to_xml: MyString
+  link_to_html_toc: MyString
+  title: MyString
+  current_to_date: 2015-02-20
+
+two:
+  unique_id: MyString
+  language: 
+  link_to_xml: MyString
+  link_to_html_toc: MyString
+  title: MyString
+  current_to_date: 2015-02-20
