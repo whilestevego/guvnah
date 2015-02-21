@@ -12,7 +12,7 @@ class ActSummariesController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @act_summaries = ActSummary.all
+    @act_summaries = ActSummary.where(language: 'eng').order(:title).page(params[:page])
 
     respond_to do |format|
         format.json { render :json => @act_summaries }
