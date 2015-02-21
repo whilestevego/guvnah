@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150221065423) do
+ActiveRecord::Schema.define(version: 20150221234142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150221065423) do
     t.date     "current_to_date"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.boolean  "ripped"
   end
 
   create_table "regulations", force: :cascade do |t|
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20150221065423) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "act_summary_id"
+    t.boolean  "ripped"
   end
 
   add_index "regulations", ["act_summary_id"], name: "index_regulations_on_act_summary_id", using: :btree
