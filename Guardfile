@@ -30,4 +30,7 @@ guard 'livereload' do
   watch(%r{config/locales/.+\.yml})
   # Rails Assets Pipeline
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
+  watch(%r{(app|vendor)(/assets/(\w+/)+_.+\.(scss|sass))}) { |m| "/assets/application.css" }
+  watch(%r{(app|vendor)(/assets/(\w+/)+(.+)\.(coffee))}) { |m| "/assets/#{m[4]}.js" }
+  watch(%r{(app|vendor)(/assets/(\w+/)+(.+)\.(slim))}) { |m| "/assets/#{m[4]}.html" }
 end

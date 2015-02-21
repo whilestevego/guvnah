@@ -1,0 +1,28 @@
+.search-bar {
+  @include display(flex);
+  @include justify-content(center);
+
+  button {
+    font-size: $large;
+    padding: 0 $baseline;
+    background-color: rgba($green, 0.5);
+    color: $white;
+    border: none;
+  }
+}
+
+.search {
+  display: block;
+  width: 600px;
+  height: $baseline;
+  border: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.3);
+  font-size: $large;
+  padding: $baseline;
+  text-align: center;
+
+  @include placeholder {
+    color: rgba(255,255,255,0.6);
+  }
+}
+

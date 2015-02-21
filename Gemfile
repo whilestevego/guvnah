@@ -20,6 +20,7 @@ gem 'kaminari'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-angular'
+  gem 'rails-assets-components-font-awesome'
 end
 
 group :development do

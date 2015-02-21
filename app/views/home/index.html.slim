@@ -1,4 +1,7 @@
 .landing(ng-controller="LandingController")
-  h1 Guvanuh
-  p() {{query}}
-  input.search(ng-model="query")
+  =video_tag("ParliamentHill.mp4", autoplay: true, loop: true)
+  h1.logo Guvanuh
+  form.search-bar
+    input.search(ng-model="query" placeholder="Search for an act or regulation here")
+    button(type="button")
+      i.fa.fa-search
