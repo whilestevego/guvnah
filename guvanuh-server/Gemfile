@@ -37,6 +37,9 @@ gem 'nokogiri'
 gem 'slim-rails'
 gem 'bourbon'
 
+# Rails Assets
+gem 'rails-assets-angular'
+
 
 group :development do
   gem 'spring'
