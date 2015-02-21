@@ -13,6 +13,7 @@ gem 'nokogiri'
 gem 'slim-rails'
 gem 'bourbon'
 gem 'angularjs-rails'
+gem 'yaml_db'
 
 # Rails Assets
 gem 'kaminari'

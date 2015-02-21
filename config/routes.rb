@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  concern :paginatable do
+      get '(page/:page)', :action => :index, :on => :collection, :as => ''
+  end
+
   get 'home/index'
 
   root 'home#index'
 
-  resources :act_summaries
+  resources :act_summaries, concerns: :paginatable
+  resources :regulations, concerns: :paginatable
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

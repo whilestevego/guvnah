@@ -12,7 +12,7 @@ class ActSummariesController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @act_summaries = ActSummary.all
+    @act_summaries = ActSummary.where(language: 'eng').order(:title).page(params[:page])
 
     respond_to do |format|
         format.json { render :json => @act_summaries }
@@ -26,7 +26,7 @@ class ActSummariesController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:product).permit(:id, :unique_id, :language, :link_to_xml, :link_to_html_toc, :title, :current_to_date)
+    def act_summary_params
+      params.require(:act_summary).permit(:id, :unique_id, :language, :link_to_xml, :link_to_html_toc, :title, :current_to_date)
     end
 end
