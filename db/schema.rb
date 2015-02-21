@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150221065423) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "act_summaries", force: :cascade do |t|
     t.string   "unique_id"
     t.string   "language"
@@ -37,6 +40,6 @@ ActiveRecord::Schema.define(version: 20150221065423) do
     t.integer  "act_summary_id"
   end
 
-  add_index "regulations", ["act_summary_id"], name: "index_regulations_on_act_summary_id"
+  add_index "regulations", ["act_summary_id"], name: "index_regulations_on_act_summary_id", using: :btree
 
 end

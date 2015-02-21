@@ -14,6 +14,7 @@ gem 'slim-rails'
 gem 'bourbon'
 gem 'angularjs-rails'
 gem 'yaml_db'
+gem 'pg'
 
 # Rails Assets
 gem 'kaminari'
