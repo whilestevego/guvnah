@@ -33,6 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 #
 gem 'puma'
+gem 'nokogiri'
 
 group :development do
   gem 'spring'
