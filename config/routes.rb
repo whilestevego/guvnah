@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :act_summaries, concerns: :paginatable
+  resources :regulations, concerns: :paginatable
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
