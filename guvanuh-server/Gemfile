@@ -34,6 +34,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #
 gem 'puma'
 gem 'nokogiri'
+gem 'slim-rails'
+gem 'bourbon'
+
 
 group :development do
   gem 'spring'
@@ -42,6 +45,9 @@ group :development do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'pry-coolline'
+
+  gem 'guard-livereload'
+  gem 'rack-livereload'
 end
 
 group :development, :test do
