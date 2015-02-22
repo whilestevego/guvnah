@@ -25,9 +25,9 @@
     font-size: $medium;
     padding: $baseline;
     background-color: $white;
-    border-top: 1px solid $grey;
-    border-right: 1px solid $grey;
-    border-bottom: 1px solid $grey;
+    border-top: 1px solid $light-grey-2;
+    border-right: 1px solid $light-grey-2;
+    border-bottom: 1px solid $light-grey-2;
     border-left: 4px solid $red;
     font-weight: 300;
   }
@@ -88,14 +88,13 @@
   }
 
   .HistoricalNote {
+    border-bottom: 1px solid $light-grey-2;
+    color: #8F8F8F;
+    font-size: $x-small;
+    text-align: right;
+
     ul {
       margin-left: 0;
-    }
-    div {
-      border-bottom: 1px solid $light-grey-2;
-      color: #8F8F8F;
-      font-size: $x-small;
-      text-align: right;
     }
   }
 
@@ -110,8 +109,6 @@
     margin-left: $baseline;
     padding: $baseline 0;
     padding-left: $baseline;
-    border-left: 1px solid $grey;
-    border-right: 1px solid $grey;
     margin-right: $baseline/2;
   }
 
