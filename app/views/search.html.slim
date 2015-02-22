@@ -2,23 +2,28 @@
   = render "shared/banner"
   = render "shared/breadcrumb", :title => "Search for \"#{query}\""
 
-  .search-results
-    .search-result-header
-      h2 Search Results
-      p.search-result-header-count
-        | #{act_summaries.length} results for&nbsp;
-        i #{query}
-    - @act_summaries.each do |act_summary|
-      .search-result
-        - if act_summary.act.nil?
-          .search-result-title.not-yet
-            | #{act_summary.title} [Not yet available]
-          .search-result-description
-            | Information not yet available
-        - else
-          .search-result-title
-            a(href="/acts/#{act_summary.act.id}")
-              | #{act_summary.title}
-          .search-result-description
-            | Information not yet available
+  .page-sections
+    .search-results
+      .search-result-header
+        h2 Search Results
+        p.search-result-header-count
+          | #{act_summaries.length} results for&nbsp;
+          i #{query}
+      - @act_summaries.each do |act_summary|
+        .search-result
+          - if act_summary.act.nil?
+            .search-result-title.not-yet
+              | #{act_summary.title} [Not yet available]
+            .search-result-description
+              | Information not yet available
+          - else
+            .search-result-title
+              a(href="/acts/#{act_summary.act.id}")
+                | #{act_summary.title}
+            .search-result-description
+              | #{act_summary.long_title}
+    / .sidebar-section
+    /   = render "shared/latest_comments"
+    /   = render "shared/sign_up_panel"
+
 

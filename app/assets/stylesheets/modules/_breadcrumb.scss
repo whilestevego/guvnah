@@ -10,6 +10,7 @@
   .breadcrumb-path {
     margin-left: $gutter;
     @include flex(1 0 auto);
+    width: 100px;
   }
 
   .breadcrumb-search {

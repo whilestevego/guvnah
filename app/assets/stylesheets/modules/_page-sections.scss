@@ -1,0 +1,12 @@
+.page-sections {
+  @include display(flex);
+
+  .main-section {
+    @include flex(1 0 auto);
+  }
+
+  .sidebar-section {
+    @include flex(0 0 300px);
+    padding-right: $gutter;
+  }
+}
