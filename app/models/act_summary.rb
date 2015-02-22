@@ -6,6 +6,10 @@ class ActSummary < ActiveRecord::Base
   end
 
   def link_to_html
-    link_to_html_toc.sub(/index\.html/, "FullText.html")
+    if language == "eng"
+      link_to_html_toc.sub(/index\.html/, "FullText.html")
+    else
+      link_to_html_toc.sub(/index\.html/, "TexteComplet.html")
+    end
   end
 end
