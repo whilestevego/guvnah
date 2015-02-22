@@ -1,16 +1,12 @@
 class ActSummariesController < ApplicationController
   before_action :set_act_summary, only: [:show]
 
-  # GET /products/1
-  # GET /products/1.json
   def show
     respond_to do |format|
         format.json { render :json => @act_summary }
     end
   end
 
-  # GET /products
-  # GET /products.json
   def index
     @act_summaries = ActSummary.where(language: 'eng').order(:title).page(params[:page])
 
