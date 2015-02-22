@@ -14,6 +14,7 @@ gem 'bourbon'
 gem 'angularjs-rails'
 gem 'yaml_db'
 gem 'pg'
+gem 'pg_search'
 
 # Rails Assets
 gem 'kaminari'
