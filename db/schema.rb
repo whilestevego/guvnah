@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150221235926) do
+ActiveRecord::Schema.define(version: 20150222004315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,9 +35,12 @@ ActiveRecord::Schema.define(version: 20150221235926) do
     t.string   "subject"
     t.text     "raw_html"
     t.text     "html"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "act_summary_id"
   end
+
+  add_index "acts", ["act_summary_id"], name: "index_acts_on_act_summary_id", using: :btree
 
   create_table "regulations", force: :cascade do |t|
     t.integer  "olid"
@@ -55,4 +58,5 @@ ActiveRecord::Schema.define(version: 20150221235926) do
 
   add_index "regulations", ["act_summary_id"], name: "index_regulations_on_act_summary_id", using: :btree
 
+  add_foreign_key "acts", "act_summaries"
 end
