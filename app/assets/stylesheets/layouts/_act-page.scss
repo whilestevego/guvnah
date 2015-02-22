@@ -8,4 +8,10 @@
   .act {
     margin: 0 $gutter;
   }
+
+  .sidebar-section {
+    .sign-up-panel {
+      margin-bottom: $baseline*2.5;
+    }
+  }
 }
