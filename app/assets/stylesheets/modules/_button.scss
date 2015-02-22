@@ -6,4 +6,9 @@ button {
   padding: $baseline/3 $baseline;
   letter-spacing: 0.5px;
   font-family: $body-font;
+  font-size: $medium/1.2;
+
+  .fa {
+    margin-right: $baseline/3;
+  }
 }

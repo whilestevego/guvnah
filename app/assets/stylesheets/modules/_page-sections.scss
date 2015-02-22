@@ -2,10 +2,13 @@
   @include display(flex);
 
   .main-section {
-    @include flex(1 0 auto);
+    @include flex(1 1 auto);
   }
 
   .sidebar-section {
+    @include display(flex);
+    @include flex-direction(column);
+    @include align-items(flex-end);
     @include flex(0 0 300px);
     padding-right: $gutter;
   }

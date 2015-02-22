@@ -1,4 +1,16 @@
 .act {
+  .act-title {
+    font-size: $large;
+    margin-bottom: $baseline/2;
+  }
+
+  .act-actions {
+    margin-bottom: $baseline/2;
+    button {
+      margin-right: $baseline/2;
+    }
+  }
+
   p {
     margin-bottom: $baseline/2;
     line-height: 1.5;
@@ -6,8 +18,7 @@
   }
 
   .Title-of-Act {
-    font-size: $large;
-    margin-bottom: $baseline/2;
+    display: none;
   }
 
   .Part {

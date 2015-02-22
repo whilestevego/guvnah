@@ -2,5 +2,19 @@
   = render "shared/banner"
   = render "shared/breadcrumb", :title => title
 
-  .act
-    = render html: raw_html.html_safe
+  .page-sections
+    .main-section
+      .act
+        h1.act-title
+          = title
+        .act-actions
+          button
+            i.fa.fa-star
+            | Subscribe
+          button
+            i.fa.fa-share-square-o
+            | Share
+        = render html: raw_html.html_safe
+    .sidebar-section
+      = render "shared/latest_comments"
+      = render "shared/sign_up_panel"
