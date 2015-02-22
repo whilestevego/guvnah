@@ -1,0 +1,102 @@
+.act {
+  p {
+    margin-bottom: $baseline/2;
+    line-height: 1.5;
+  }
+
+  .Title-of-Act {
+    font-size: $large;
+    margin-bottom: $baseline/2;
+  }
+
+  .Part {
+    font-size: $medium;
+    padding: $baseline;
+    background-color: $white;
+    border: 1px solid $grey;
+    border-radius: 5px;
+  }
+
+  .MarginalNote {
+    color: $red;
+    text-transform: uppercase;
+    font-size: $small;
+    margin-bottom: $baseline/2;
+  }
+
+  .Part + .MarginalNote {
+    padding-top: $baseline;
+  }
+
+  .MarginalNoteDefinedTerm {
+    @extend .MarginalNote;
+    margin-left: $baseline;
+    margin-right: $baseline/2;
+    padding-left: $baseline;
+    background-color: $white;
+  }
+
+  .Section,
+  .Definition, .HistoricalNote, .MarginalNote,
+  .Subsection, .Paragraph, .MarginalNoteDefinedTerm
+  div.Footnote {
+    background-color: $white;
+    margin-bottom: 0;
+    padding-bottom: $baseline/2;
+    padding-left: $baseline;
+    padding-right: $baseline;
+    margin-left: $baseline;
+    margin-right: $baseline/2;
+    border-left: 1px solid $grey;
+    border-right: 1px solid $grey;
+    & > * {
+      margin-left: 0;
+      border: 0;
+    }
+
+    .Definition {
+      border: 0;
+      dt .MarginalNoteDefinedTerm span.DefinedTerm dfn {
+        border: 0;
+      }
+    }
+  }
+
+  .order {
+    .MarginalNote {
+      padding-left: 0;
+      margin-left: 0;
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
+  .HistoricalNote {
+    ul {
+      margin-left: 0;
+    }
+  }
+
+  .Subheading {
+    font-size: $medium;
+    font-weight: 600;
+    margin: $baseline 0;
+    text-transform: uppercase;
+    margin-left: $baseline;
+    background-color: $white;
+    margin: 0;
+    margin-left: $baseline;
+    padding: $baseline 0;
+    padding-left: $baseline;
+    border-left: 1px solid $grey;
+    border-right: 1px solid $grey;
+    margin-right: $baseline/2;
+  }
+
+  .DefinedTerm {
+    border: 0;
+  }
+
+  .wb-invisible, .PITLink { display: none; }
+
+}

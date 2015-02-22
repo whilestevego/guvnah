@@ -3,8 +3,8 @@ class ActsController < ApplicationController
 
   def show
     respond_to do |format|
-      format.html { render :json => @act.raw_html }
-      format.json { render :json => @act.to_json(include: :act_summary) }
+      format.html { render template: "acts/show", locals: {raw_html: @act.raw_html }}
+      format.json { render :json => @act(include: :act_summary) }
     end
   end
 

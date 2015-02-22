@@ -1,0 +1,20 @@
+.banner {
+  @include display(flex);
+  @include flex(1 0 auto);
+  padding: 0 $gutter;
+  @include align-items(center);
+  background-color: $white;
+
+  .logo {
+    color: $red;
+    margin: $baseline*2 0;
+  }
+  .banner-logo-section {
+    @include flex(1 0 auto);
+  }
+
+  .banner-links-section {
+    @include flex(0 0 auto);
+    a:first-child { margin-right: $baseline; }
+  }
+}

@@ -1,2 +1,17 @@
-h1 Acts#show
-p Find me in app/views/acts/show.html.slim
+.act-page
+  .banner
+    .banner-logo-section
+      h1.logo Guvnah
+    .banner-links-section
+      a(href="") Acts & Regulations
+      a(href="") My Subscriptions
+
+  .breadcrumb
+    .breadcrumb-path
+      | Home / Access to Information Act
+    .breadcrumb-search.search-input
+      input(type="text" placeholder="Search for Acts or Regulations")
+      i.fa.fa-search
+
+  .act
+    = render html: raw_html.html_safe

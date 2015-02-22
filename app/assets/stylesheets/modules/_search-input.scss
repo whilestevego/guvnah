@@ -1,0 +1,15 @@
+.search-input {
+  @include display(flex);
+  @include align-items(center);
+
+  input {
+    border: none;
+    border-radius: 4px;
+    padding: $baseline/2;
+    width: 200px;
+  }
+
+  .fa {
+    margin-left: $baseline/2;
+  }
+}

@@ -1,0 +1,19 @@
+.breadcrumb {
+  @include display(flex);
+  @include align-items(center);
+
+  background-color: $grey;
+  color: $white;
+
+  padding: $baseline*1.5 0;
+
+  .breadcrumb-path {
+    margin-left: $gutter;
+    @include flex(1 0 auto);
+  }
+
+  .breadcrumb-search {
+    margin-right: $gutter;
+    @include flex(0 0 auto);
+  }
+}

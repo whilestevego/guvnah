@@ -1,0 +1,11 @@
+.act-page {
+  background-color: $light-grey;
+
+  .breadcrumb {
+    margin-bottom: $baseline*2;
+  }
+
+  .act {
+    margin: 0 $gutter;
+  }
+}
