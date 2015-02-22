@@ -8,6 +8,7 @@
     background-color: rgba($green, 0.5);
     color: $white;
     border: none;
+    border-radius: 0;
   }
 }
 
@@ -23,6 +24,11 @@
 
   @include placeholder {
     color: rgba(255,255,255,0.6);
+  }
+
+  @media #{$phone} {
+    width: 60%;
+
   }
 }
 
