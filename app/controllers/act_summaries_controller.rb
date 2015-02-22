@@ -9,13 +9,13 @@ class ActSummariesController < ApplicationController
 
   def index
     if params[:search] && params[:page]
-      @act_summaries = ActSummary.search_by_title(params[:search]).where(language:"eng").order(:title).page(params[:page])
+      @act_summaries = ActSummary.search_by_title(params[:search]).where(language:"eng", ripped:true).order(:title).page(params[:page])
     elsif params[:search]
-      @act_summaries = ActSummary.search_by_title(params[:search]).where(language:"eng").order(:title)
+      @act_summaries = ActSummary.search_by_title(params[:search]).where(language:"eng", ripped:true).order(:title)
     elsif params[:page]
-      @act_summaries = ActSummary.where(language:"eng").order(:title).page(params[:page])
+      @act_summaries = ActSummary.where(language:"eng", ripped:true).order(:title).page(params[:page])
     else
-      @act_summaries = ActSummary.where(language:"eng").order(:title)
+      @act_summaries = ActSummary.where(language:"eng", ripped:true).order(:title)
     end
 
     respond_to do |format|
