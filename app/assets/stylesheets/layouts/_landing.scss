@@ -1,4 +1,16 @@
 .landing {
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100vh;
+
+  .content {
+    @include flex(1 0 auto);
+  }
+
+  .call-to-action {
+    @include flex(0 0 auto);
+  }
+
   video {
     position: fixed;
     right: 0;

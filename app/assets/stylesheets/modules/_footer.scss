@@ -1,0 +1,41 @@
+.footer {
+  @include display(flex);
+
+  border-top: 6px solid $red;
+  font-size: $small;
+  color: $white;
+  background-color: $dark-grey;
+
+  padding: $baseline $gutter;
+}
+
+.footer-latest-updates {
+  @include flex(1 0 auto);
+  li {
+    @include display(flex);
+    margin-bottom: $baseline;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer-latest-updates-title {
+  font-weight: bold;
+  margin-bottom: $baseline;
+}
+
+.footer-latest-updates-date {
+  @include flex(0 0 $baseline*5);
+}
+
+.footer-latest-updates-link {
+  a { color: $white; text-decoration: underline; }
+  @include flex(1 0 auto);
+}
+
+.footer-copyright {
+  @include flex(0 0 auto);
+  @include display(flex);
+  @include align-items(flex-end);
+}

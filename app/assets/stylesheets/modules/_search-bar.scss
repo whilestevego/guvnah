@@ -3,10 +3,10 @@
   @include justify-content(center);
 
   button {
-    font-size: $large;
+    font-size: $medium*1.2;
     padding: 0 $baseline;
-    background-color: rgba($green, 0.5);
-    color: $white;
+    background-color: transparent;
+    color: $red;
     border: none;
     border-radius: 0;
   }
@@ -16,14 +16,16 @@
   display: block;
   width: 600px;
   height: $baseline;
-  border: rgba(255,255,255,0.6);
   background-color: rgba(255,255,255,0.3);
   font-size: $large;
   padding: $baseline;
   text-align: left;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: $light-grey-2;
 
   @include placeholder {
-    color: rgba(255,255,255,0.6);
+    color: $light-grey-2;
   }
 
   @media #{$phone} {
