@@ -5,6 +5,10 @@ class ActSummary < ActiveRecord::Base
   has_many :regulations
   has_one :act
 
+  def ripped?
+    ripped == true
+  end
+
   def link_to_previous_versions
     link_to_html_toc.sub(/index\.html/, "PITIndex.html")
   end
