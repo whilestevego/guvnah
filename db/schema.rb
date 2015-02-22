@@ -69,4 +69,5 @@ ActiveRecord::Schema.define(version: 20150222040703) do
   add_index "regulations", ["act_summary_id"], name: "index_regulations_on_act_summary_id", using: :btree
 
   add_foreign_key "acts", "act_summaries"
+  add_foreign_key "acts", "act_summaries"
 end
