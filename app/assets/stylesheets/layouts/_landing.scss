@@ -16,6 +16,11 @@
       left: -50%;
       background-size: contain;
     }
+
+    @media #{$tablet} {
+      left: 0;
+      background-size: cover;
+    }
   }
 
   .logo {
