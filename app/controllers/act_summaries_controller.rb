@@ -3,7 +3,7 @@ class ActSummariesController < ApplicationController
 
   def show
     respond_to do |format|
-        format.json { render :json => @act_summary }
+      format.json { render :json => @act_summary.to_json(include: :act) }
     end
   end
 
@@ -15,7 +15,7 @@ class ActSummariesController < ApplicationController
     @act_summaries = @act_summaries.where(language: 'eng').order(:title)
 
     respond_to do |format|
-        format.json { render :json => @act_summaries }
+      format.json { render :json => @act_summaries.to_json(include: :act) }
     end
   end
 

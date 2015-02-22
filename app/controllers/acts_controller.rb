@@ -4,7 +4,7 @@ class ActsController < ApplicationController
   def show
     respond_to do |format|
       format.html { render :json => @act.raw_html }
-      format.json { render :json => @act }
+      format.json { render :json => @act.to_json(include: :act_summary) }
     end
   end
 
@@ -12,7 +12,7 @@ class ActsController < ApplicationController
     @acts = Act.page(params[:page])
 
     respond_to do |format|
-      format.json { render :json => @acts }
+      format.json { render :json => @acts.to_json(include: :act_summary) }
     end
   end
 
