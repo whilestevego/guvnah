@@ -2,6 +2,7 @@
   p {
     margin-bottom: $baseline/2;
     line-height: 1.5;
+    font-size: $small;
   }
 
   .Title-of-Act {
@@ -13,14 +14,17 @@
     font-size: $medium;
     padding: $baseline;
     background-color: $white;
-    border: 1px solid $grey;
-    border-radius: 5px;
+    border-top: 1px solid $grey;
+    border-right: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    border-left: 4px solid $red;
+    font-weight: 300;
   }
 
   .MarginalNote {
     color: $red;
     text-transform: uppercase;
-    font-size: $small;
+    font-size: $x-small;
     margin-bottom: $baseline/2;
   }
 
@@ -45,10 +49,8 @@
     padding-bottom: $baseline/2;
     padding-left: $baseline;
     padding-right: $baseline;
-    margin-left: $baseline;
-    margin-right: $baseline/2;
-    border-left: 1px solid $grey;
-    border-right: 1px solid $grey;
+    border-left: 1px solid $light-grey-2;
+    border-right: 1px solid $light-grey-2;
     & > * {
       margin-left: 0;
       border: 0;
@@ -58,6 +60,9 @@
       border: 0;
       dt .MarginalNoteDefinedTerm span.DefinedTerm dfn {
         border: 0;
+      }
+      p {
+        padding-top: 10px;
       }
     }
   }
@@ -74,6 +79,12 @@
   .HistoricalNote {
     ul {
       margin-left: 0;
+    }
+    div {
+      border-bottom: 1px solid $light-grey-2;
+      color: #8F8F8F;
+      font-size: $x-small;
+      text-align: right;
     }
   }
 
@@ -95,6 +106,7 @@
 
   .DefinedTerm {
     border: 0;
+    font-weight: $b;
   }
 
   .wb-invisible, .PITLink { display: none; }
