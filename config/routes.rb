@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :act_summaries, concerns: :paginatable
   resources :regulations, concerns: :paginatable
+  resources :acts, concerns: :paginatable
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
