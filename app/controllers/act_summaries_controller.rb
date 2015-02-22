@@ -8,11 +8,15 @@ class ActSummariesController < ApplicationController
   end
 
   def index
-    @act_summaries = ActSummary
-
-    @act_summaries = @act_summaries.search_by_title(params[:search]) if params[:search]
-    @act_summaries = @act_summaries.page(params[:page]) if params[:page]
-    @act_summaries = @act_summaries.where(language: 'eng').order(:title)
+    if params[:search] && params[:page]
+      @act_summaries = ActSummary.search_by_title(params[:search]).where(language:"eng").order(:title).page(params[:page])
+    elsif params[:search]
+      @act_summaries = ActSummary.search_by_title(params[:search]).where(language:"eng").order(:title)
+    elsif params[:page]
+      @act_summaries = ActSummary.where(language:"eng").order(:title).page(params[:page])
+    else
+      @act_summaries = ActSummary.where(language:"eng").order(:title)
+    end
 
     respond_to do |format|
       format.json { render :json => @act_summaries.to_json(include: :act) }
