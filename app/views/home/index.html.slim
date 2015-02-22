@@ -1,9 +1,16 @@
-.landing(ng-controller="LandingController")
+.landing
   .content
     h1.logo Guvnah
-    form.search-bar
-      input.search(type="text" ng-model="query" lang="en" placeholder="Search for an act or regulation here")
-      button(type="button")
+    form.search-bar(
+      action="/act_summaries"
+      method="get"
+    )
+      input.search(
+        name="search"
+        type="text"
+        lang="en"
+        placeholder="Search for an act or regulation here"
+      )
+      button(type="submit")
         i.fa.fa-search
   = render 'shared/call_to_action'
-= render 'shared/footer'

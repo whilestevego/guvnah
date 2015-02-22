@@ -1,18 +1,6 @@
 .act-page
-  .banner
-    .banner-logo-section
-      h1.logo Guvnah
-    .banner-links-section
-      a(href="") Acts & Regulations
-      a(href="") My Subscriptions
-
-  .breadcrumb
-    .breadcrumb-path
-      | Home /&nbsp;
-      = title
-    .breadcrumb-search.search-input
-      input(type="text" placeholder="Search for Acts or Regulations")
-      i.fa.fa-search
+  = render "shared/banner"
+  = render "shared/breadcrumb", :title => title
 
   .act
     = render html: raw_html.html_safe

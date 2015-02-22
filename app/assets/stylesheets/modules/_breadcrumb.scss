@@ -16,4 +16,9 @@
     margin-right: $gutter;
     @include flex(0 0 auto);
   }
+
+
+  button {
+    background-color: transparent;
+  }
 }

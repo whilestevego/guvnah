@@ -1,0 +1,10 @@
+.search-page
+  = render "shared/banner"
+  = render "shared/breadcrumb", :title => "Search for \"#{query}\""
+
+  .search-results
+    - @act_summaries.each do |act_summary|
+      .search-result
+        a(href="")
+          | #{act_summary.title}
+

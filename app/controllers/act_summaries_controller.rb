@@ -19,6 +19,7 @@ class ActSummariesController < ApplicationController
     end
 
     respond_to do |format|
+      format.html { render template: "search", locals: {act_summaries: @act_summaries, query: params[:search]} }
       format.json { render :json => @act_summaries.to_json(include: :act) }
     end
   end

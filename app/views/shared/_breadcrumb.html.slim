@@ -1,0 +1,15 @@
+.breadcrumb
+    .breadcrumb-path
+      | Home /&nbsp;
+      = title
+    form.breadcrumb-search.search-input(
+      action="/act_summaries"
+      method="get"
+    )
+      input(
+        name="search"
+        type="text"
+        placeholder="Search for Acts or Regulations"
+      )
+      button(type="submit")
+        i.fa.fa-search

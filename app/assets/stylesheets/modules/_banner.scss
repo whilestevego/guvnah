@@ -1,6 +1,6 @@
 .banner {
   @include display(flex);
-  @include flex(1 0 auto);
+  @include flex(0 0 auto);
   padding: 0 $gutter;
   @include align-items(center);
   background-color: $white;
