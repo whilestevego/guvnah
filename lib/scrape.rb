@@ -1,9 +1,11 @@
+require 'open-uri'
 require 'nokogiri'
-f = File.open("#{Rails.root.to_s}/dump/Legis.xml")
-@doc = Nokogiri::XML(f) do |config|
-  config.options = Nokogiri::XML::ParseOptions::NOBLANKS
-end
-f.close
+
+#f = File.open("#{Rails.root.to_s}/dump/Legis.xml")
+#@doc = Nokogiri::XML(f) do |config|
+#  config.options = Nokogiri::XML::ParseOptions::NOBLANKS
+#end
+#f.close
 
 def run_regulation
   @doc.css('Regulation').each do |element|
@@ -40,3 +42,22 @@ def run_act_summaries
     act.save
   end
 end
+
+def run_acts
+  ActSummary.where(language:"eng").where(ripped: nil).limit(100).each do |act_summary|
+    @html = Nokogiri::HTML(open(act_summary.link_to_html))
+
+    act = Act.new
+
+    act.creator = @html.css("meta").css("[name='dcterms.creator']").attr('content')
+    act.issued = @html.css("meta").css("[name='dcterms.issued']").attr('content').value
+    act.modified = @html.css("meta").css("[name='dcterms.modified']").attr('content').value
+    act.subject = @html.css("meta").css("[name='dcterms.subject']").attr('content')
+    act.raw_html = @html.css(".docContents > div").inner_html
+
+    act.act_summary = act_summary
+    act_summary.update(ripped: true) if act.save!
+  end
+end
+
+
