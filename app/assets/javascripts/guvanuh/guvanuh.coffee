@@ -4,5 +4,4 @@
 #= require_tree ./filters
 #= require_tree ./services
 
-@Guvanuh = angular.module('Guvanuh',[
-])
+@Guvanuh = angular.module('Guvanuh',['ngResource'])
