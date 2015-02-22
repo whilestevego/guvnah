@@ -2,7 +2,36 @@
   @include display(flex);
   @include flex-direction(column);
   min-height: 100vh;
+
+  background-color: $light-grey;
+
   .search-results {
     @include flex(1 0 auto);
   }
+
+  .search-result {
+  }
+
+  .search-result-header {
+    padding: $baseline*2 0;
+    border-bottom: 1px solid $light-grey-2;
+  }
+
+  .search-result-header-count {
+    margin-top: $baseline;
+  }
+
+  .search-result-title, .search-result-description {
+    padding: $baseline;
+  }
+
+  .search-result-title {
+    font-size: $medium*1.2;
+    border-bottom: 1px solid $light-grey-2;
+    a { color: $red; }
+    &.not-yet {
+      color: $black;
+    }
+  }
+
 }

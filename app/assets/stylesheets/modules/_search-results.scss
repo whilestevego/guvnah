@@ -1,0 +1,13 @@
+.search-results {
+  margin: 0 $gutter;
+}
+
+.search-result {
+  background-color: $white;
+  border: 1px solid $light-grey-2;
+  margin: $baseline 0;
+}
+
+.search-result-title {
+  color: $red;
+}

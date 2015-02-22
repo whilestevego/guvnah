@@ -22,6 +22,8 @@ h5 { font-size: $x-small; }
   font-weight: bold;
   font-style: italic;
   letter-spacing: -10px;
+
+  a { color: $red; }
 }
 
 a {
@@ -31,4 +33,8 @@ a {
 
 b {
   font-weight: bold;
+}
+
+i {
+  font-style: italic;
 }
